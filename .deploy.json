@@ -1,0 +1,22 @@
+{
+    "DEPLOYPATH" : "/home/designcube3/demo_projects/kdc-trademarks",
+    "task" :  [
+        "app",
+        "bootstrap",
+        "config",
+        "database",
+        "public",
+        "resources",
+        "routes",
+        "storage",
+        "tests",
+        "artisan",
+        "composer.json",
+        "composer.lock",
+        "package.json",
+        "package-lock.json",
+        ".env.example",
+        "server.php",
+        "vite.config.js"
+    ]
+}
