@@ -34,7 +34,7 @@
             </a>
 
             <div class="action-wrapper">
-                <a href="#"
+                <a href="https://kartinidjohan.com/"
                     class="flex items-center bg-orange-300 px-3 py-1.5 text-black"
                 >
                     <span class="material-symbols-outlined outlined-bold">keyboard_arrow_left</span>

@@ -129,24 +129,23 @@ new class extends Component
 
     public function sendEnquiry()
     {
-        $fieldRegisters = $this->registers;
-        $fieldRegistranName = $this->registranName;
-        $fieldRegistranCompany = $this->registranCompany;
-        $fieldRegistranEmail = $this->registranEmail;
-        $fieldRegistranPhoneNumber = $this->registranPhoneNumber;
-        $fieldRegistranWhatsappNumber = $this->registranWhatsappNumber;
-        $fieldRegistranWeChatNumber = $this->registranWeChatNumber;
+        $fieldRegisters                 = $this->registers;
+        $fieldRegistranName             = $this->registranName;
+        $fieldRegistranCompany          = $this->registranCompany;
+        $fieldRegistranEmail            = $this->registranEmail;
+        $fieldRegistranPhoneNumber      = $this->registranPhoneNumber;
+        $fieldRegistranWhatsappNumber   = $this->registranWhatsappNumber;
+        $fieldRegistranWeChatNumber     = $this->registranWeChatNumber;
 
         DB::beginTransaction();
-
         try {
             $register = Registration::create([
-                'name' => $fieldRegistranName,
-                'email' => $fieldRegistranEmail,
-                'phone' => $fieldRegistranPhoneNumber,
-                'company' => $fieldRegistranCompany,
-                'whatsapp' => $fieldRegistranWhatsappNumber,
-                'wechat' => $fieldRegistranWeChatNumber,
+                'name'      => $fieldRegistranName,
+                'email'     => $fieldRegistranEmail,
+                'phone'     => $fieldRegistranPhoneNumber,
+                'company'   => $fieldRegistranCompany,
+                'whatsapp'  => $fieldRegistranWhatsappNumber,
+                'wechat'    => $fieldRegistranWeChatNumber,
             ]);
 
             $logoPrefix = 'registrations/' . $register->id . '/logos/';
@@ -159,40 +158,38 @@ new class extends Component
                 }
 
                 $register->details()->create([
-                    'word_marks' => $item['wordMarks'] ? implode(', ', $item['wordMarks']) : null,
-                    'logo' => $logoPath,
-                    'goods_services' => $item['goodsOrServices'],
-                    'currency' => $item['quotationCurrency'],
-                    'trademark_administration' => $item['trademarkAdminType'],
-                    'countries' => $item['selectedCountries'] ? implode(', ', $item['selectedCountries']) : null,
-                    'classifications' => $item['selectedClasses'] ? implode(', ', $item['selectedClasses']) : null,
+                    'word_marks'                => $item['wordMarks'] ? implode(', ', $item['wordMarks']) : null,
+                    'logo'                      => $logoPath,
+                    'goods_services'            => $item['goodsOrServices'],
+                    'currency'                  => $item['quotationCurrency'],
+                    'trademark_administration'  => $item['trademarkAdminType'],
+                    'countries'                 => $item['selectedCountries'] ? implode(', ', $item['selectedCountries']) : null,
+                    'classifications'           => $item['selectedClasses'] ? implode(', ', $item['selectedClasses']) : null,
                 ]);
             }
-
-            DB::commit();
-
-            Log::info('Enquiry submitted', [
-                'registers' => $fieldRegisters,
-                'registranName' => $fieldRegistranName,
-                'registranCompany' => $fieldRegistranCompany,
-                'registranEmail' => $fieldRegistranEmail,
-                'registranPhoneNumber' => $fieldRegistranPhoneNumber,
-                'registranWhatsappNumber' => $fieldRegistranWhatsappNumber,
-                'registranWeChatNumber' => $fieldRegistranWeChatNumber,
-            ]);
 
         } catch (\Throwable $th) {
             Log::error('Failed to submit enquiry', [
                 'error' => $th->getMessage(),
             ]);
             DB::rollBack();
-
             $this->js("alert('Failed to submit enquiry. Please try again later.');");
         }
 
+        DB::commit();
+
+        Log::info('Enquiry submitted', [
+            'registers' => $fieldRegisters,
+            'registranName' => $fieldRegistranName,
+            'registranCompany' => $fieldRegistranCompany,
+            'registranEmail' => $fieldRegistranEmail,
+            'registranPhoneNumber' => $fieldRegistranPhoneNumber,
+            'registranWhatsappNumber' => $fieldRegistranWhatsappNumber,
+            'registranWeChatNumber' => $fieldRegistranWeChatNumber,
+        ]);
+
         // In real application, this should send the enquiry to the backend and store in database
         // For this example, we will just reset the form fields and show a success message
-
         $this->reset([
             'registranName',
             'registranCompany',
@@ -201,9 +198,7 @@ new class extends Component
             'registranWhatsappNumber',
             'registranWeChatNumber',
         ]);
-
         $this->registers = [];
-
         $this->js("alert('Enquiry submitted successfully!');");
     }
 };

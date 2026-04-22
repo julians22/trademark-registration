@@ -46,18 +46,6 @@ class RegistrationsTable
             ])
             ->recordActions([
                 ViewAction::make(),
-                Action::make('Send Mail')
-                    ->requiresConfirmation()
-                    ->action(function ($record) {
-                        // Implement your email sending logic here
-                        try {
-                            Mail::to('dabnerjulian@gmail.com')->send(new RegistationCreated($record));
-                        } catch (\Throwable $th) {
-                            //throw $th;
-                            // Handle the error, e.g., log it or display a notification
-                            Log::error('Failed to send email: ' . $th->getMessage());
-                        }
-                    }),
                 // EditAction::make(),
             ])
             ->toolbarActions([
