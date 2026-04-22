@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Register the observer for the Registration model
+        \App\Models\Registration::observe(\App\Observers\RegistrationObserver::class);
     }
 }
