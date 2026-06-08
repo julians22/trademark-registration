@@ -283,7 +283,7 @@ new class extends Component
                                     wire:ignore
                                     id="my_modal_1" class="modal">
                                     <div
-                                        class="rounded-2xl max-w-4xl modal-box">
+                                        class="rounded-2xl max-w-5xl modal-box">
                                         <h3 class="font-bold text-lg">SELECT CLASSES FOR “TRADEMARK”</h3>
                                         <p class="mb-6"><i>Select the relevant classification of goods and services to the above trade mark application.
                                             You may select one or more classes which are applicable to your trademark application.</i></p>
@@ -298,7 +298,7 @@ new class extends Component
                                                         value="{{ $key }}"
                                                         type="checkbox"
                                                         class="checkbox checkbox-lg" />
-                                                    {{ $key }} - {{ $item }}
+                                                    <p class="text-primary-content text-lg"><strong>{{ $key }}</strong> - {{ $item }}</p>
                                                 </label>
                                             @endforeach
                                         </div>
@@ -314,18 +314,16 @@ new class extends Component
                             </div>
                         </div>
 
-                        <fieldset class="fieldset">
+                        {{-- <fieldset class="fieldset">
                             <legend class="font-bold text-lg fieldset-legend">Items of the Goods or Services</legend>
                             <p class="label"><i>If you unsure the class(es). Please key in the goods or services below. <br> We will advice you on the relevant class(es) to be applied for under your trade mark application.</i></p>
                             <textarea wire:model.live="goodsOrServices" class="rounded-2xl w-full textarea" rows="4" placeholder="Type here"></textarea>
-                        </fieldset>
+                        </fieldset> --}}
 
                         <fieldset class="fieldset">
                             <legend class="font-bold text-lg fieldset-legend">Quotation Currency</legend>
                             <select wire:model.live="quotationCurrency" class="rounded-full w-full select-neutral select">
                                 <option value="IDR - Indonesian Rupiah">- IDR - Indonesian Rupiah</option>
-                                <option value="MYR - Malaysian Ringgit">- MYR - Malaysian Ringgit</option>
-                                <option value="SGD - Singapore Dollar">- SGD - Singapore Dollar</option>
                                 <option value="USD - United States Dollar">- USD - United States Dollar</option>
                             </select>
                         </fieldset>
