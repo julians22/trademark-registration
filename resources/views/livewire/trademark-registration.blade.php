@@ -119,7 +119,7 @@
                                             @if (!empty($classDriveId))
                                                 <button
                                                     type="button"
-                                                    class="link link-primary"
+                                                    class="link link-warning"
                                                     x-on:click="detailUrl = 'https://drive.google.com/file/d/{{ $classDriveId }}/preview'; detailTitle = '{{ $key }}'; $refs.classDetailModal.showModal()"
                                                 >
                                                     view detail
