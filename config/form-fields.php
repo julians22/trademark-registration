@@ -130,6 +130,54 @@
 // by others to meet the needs of individuals.
 
 return [
+    'brand_type' => [
+        [
+            'name' => 'Wordmark',
+            'slug' => 'wordmark',
+            'description' => '',
+            'fields' => [
+                [
+                    'type' => 'text',
+                    'label' => 'Insert Wordmark',
+                    'required' => true,
+                ],
+                [
+                    'type' => 'text',
+                    'label' => 'Meaning of Wordmark',
+                    're'
+                ]
+            ]
+        ],
+        [
+            'name' => 'Painting brand/logo',
+            'slug' => 'painting-brand',
+            'description' => '',
+            'field_type' => 'image|text',
+        ],
+        [
+            'name' => 'Wordmark + painting/logo',
+            'slug' => 'wordmark-painting',
+            'description' => '',
+            'field_type' => 'image|text',
+        ],
+        [
+            'name' => 'Three-dimensional branding',
+            'slug' => '3d-branding',
+            'description' => '',
+            'field_type' => 'image|text',
+        ],
+        [
+            'name' => 'Voice brand',
+            'slug' => 'voice-brand',
+            'description' => '',
+            'field_type' => 'image|text',
+        ],
+        [
+            'name' => 'Hologram brand',
+            'slug' => 'hologram-brand',
+            'description' => 'im',
+        ],
+    ],
     'classes' => [
         'Class 1' => 'Chemicals used in industry, science and photography, as well as in agriculture, horticulture and forestry; unprocessed artificial resins, unprocessed plastics; manures; fire extinguishing compositions; tempering and soldering preparations; chemical substances for preserving foodstuffs; tanning substances; adhesives used in industry.',
         'Class 2' => 'Paints, varnishes, lacquers; preservatives against rust and against deterioration of wood; colorants; mordants; raw natural resins; metals in foil and powder form for painters, decorators, printers and artists.',
@@ -178,6 +226,54 @@ return [
         'Class 45' => 'Legal services; security services for the protection of property and individuals; personal and social services rendered by others to meet the needs of individuals.',
     ],
 
+    'classes_drive_id' => [
+        'Class 1' => '10SLgTZAo3zIXae5HlHaui1WtWg-RsnGj',
+        'Class 2' => '1GHoTqC0JF8G2oOxPEVkE5iDTTOCmCaSS',
+        'Class 3' => '1BVRDbQbGVpfYaYFh3a6HSgJ1obC2Uw1j',
+        'Class 4' => '1dM86Ac5iQA63KO1TEBF4OG4ipR7XwEms',
+        'Class 5' => '1892rRqVb3-RWGm_1WPpQw-U26dlr8FMB',
+        'Class 6' => '1SeIZCLPtvPntqme_ztn15yqYitLCCUss',
+        'Class 7' => '1SeIZCLPtvPntqme_ztn15yqYitLCCUss',
+        'Class 8' => '1DobD8rYMQj54NMkmCqX7y_thEGu5lP-g',
+        'Class 9' => '1d7p6JPB8i8yG3UYLPn2RhbVD27wz0pSd',
+        'Class 10' => '1IrxkoOc0KwIZ6txHWF9eZCPC5QZ-KpUO',
+        'Class 11' => '18jCQfSQS6UcG1ZBswzxuYB_u4RjHIkVr',
+        'Class 12' => '1ybTs3Ubhjzg4eawVEOAAWCsO6sP-TQGC',
+        'Class 13' => '1Cf7-4DKSV6CbcDjqL6p93pRDjMiy7lZI',
+        'Class 14' => '1I6VEa_k6W52Ygp7UmCC8ktLFgaCOuP4y',
+        'Class 15' => '1-s4ifnPNz4InCEKksNAwnsb2MVeADvUq',
+        'Class 16' => '12M0iWTecUQKmeGMIzXj6kiOKsl9gWacm',
+        'Class 17' => '1aPWLH-ikbLtRcixPHg9e4Bb0V5HIg7lQ',
+        'Class 18' => '1oGgZuFULcevEYC1EY5r7DwdaGiYSt71m',
+        'Class 19' => '1JxTCDytLSu_8nV9GNOvHlFMJtEF59SVS',
+        'Class 20' => '1wQt0EXUY2e6qtqHC9barS3fzZoHRoM3W',
+        'Class 21' => '1lzMAElzkySAAJXTV4u7YcAx2Vbq1zTF5',
+        'Class 22' => '15gxUqnla3evVQGaYO5CGx7oV5hcUDMQN',
+        'Class 23' => '1fWqhsZtNZuVzAgWK_-hECoclT4q_QS2c',
+        'Class 24' => '1k3RmQGW0a8TCWtd3YP2le3bkVmwknHlY',
+        'Class 25' => '1ygXgUPk6pexBjfa1pV10FrzJU4_MjVr6',
+        'Class 26' => '1_KkjBrLnApHz9H_1LwrdMiyaMhBmz0JH',
+        'Class 27' => '1U2vMechdCrHXVjwS1EPYVotG0nftEUuI',
+        'Class 28' => '1YPpFsN9Zsuz-NYk07wjSOOxSiujUtt59',
+        'Class 29' => '1bWBVSj1aIoul9Fr4lXH8nA0BLshTYmNy',
+        'Class 30' => '1FycbfeN_EOAF5XlsZ5__BK7sOTgEoEVX',
+        'Class 31' => '1voj74SehnDz8dvlFoJDQaf72h_oF5rGJ',
+        'Class 32' => '1XndBFPtqxIYngh15__aX8kGq36HbNV23',
+        'Class 33' => '1CAeGUyiqILKBIzp7XffOtlvANFeflOle',
+        'Class 34' => '19OGN_Yi3GMMLrAijkIQi9sG8nhuDY9i4',
+        'Class 35' => '191llO8VVX10zOkgIeUMIgXGJ40aBPFGy',
+        'Class 36' => '1sVm6VG2Xd7WzDUrOjRgv9_Fm9x9Btcpf',
+        'Class 37' => '1w5tLDK8FeABHcpwt68qs24upR-3ITSps',
+        'Class 38' => '19JCMMcTjKtR2ZJzoMKL5EiAOydbyYLo3',
+        'Class 39' => '1CQ-NHZuhs4eHn4yLYxb8h_n1xNp0fpHJ',
+        'Class 40' => '1K9fIVFps5yQPU9lQZrf01uhB_XUzWOv7',
+        'Class 41' => '1GcH7LK9AaR9W4eKwgfHD7RbP56LyqWWb',
+        'Class 42' => '1ehFt_1XHAsRbXRnuigpzXk4bLC9i6mDS',
+        'Class 43' => '1Ve8rBvJcue4hFivtHwwNZIuj25yDbaoV',
+        'Class 44' => '1zGa0Rqdu8K7EKBnwbW0A5YL1rJ8YdZI1',
+        'Class 45' => '1L58SGR4v-tuBw2Po5cIHNndEUKOnOhyZ',
+    ],
+
     'regions' => [
         [
             "name" => "Asia",
@@ -200,83 +296,83 @@ return [
                 "Brunei",
             ]
         ],
-        [
-            "name" => "Oceania",
-            "countries" => [
-                "Australia",
-                "New Zealand",
-                "Fiji",
-                "Papua New Guinea",
-                "Samoa",
-                "Tonga",
-                "Vanuatu",
-                "Solomon Islands",
-                "Micronesia",
-                "Palau",
-            ]
-        ],
-        [
-            "name" => "Africa",
-            "countries" => [
-                "South Africa",
-                "Nigeria",
-                "Egypt",
-                "Kenya",
-                "Ethiopia",
-                "Ghana",
-                "Morocco",
-                "Algeria",
-                "Tunisia",
-                "Uganda",
-            ]
-        ],
-        [
-            "name" => "Americas",
-            "countries" => [
-                "United States",
-                "Canada",
-                "Mexico",
-                "Brazil",
-                "Argentina",
-                "Colombia",
-                "Chile",
-                "Peru",
-                "Venezuela",
-                "Ecuador",
-            ]
-        ],
-        [
-            "name" => "Europe",
-            "countries" => [
-                "United Kingdom",
-                "Germany",
-                "France",
-                "Italy",
-                "Spain",
-                "Netherlands",
-                "Sweden",
-                "Norway",
-                "Denmark",
-                "Finland",
-            ]
-        ],
-        [
-            "name" => "Middle East",
-            "countries" => [
-                "Iran",
-                "Saudi Arabia",
-                "United Arab Emirates",
-                "Qatar",
-                "Kuwait",
-                "Oman",
-                "Bahrain",
-                "Israel",
-                "Jordan",
-                "Lebanon",
-                "Syria",
-                "Iraq",
-                "Yemen",
-            ]
-        ]
+        // [
+        //     "name" => "Oceania",
+        //     "countries" => [
+        //         "Australia",
+        //         "New Zealand",
+        //         "Fiji",
+        //         "Papua New Guinea",
+        //         "Samoa",
+        //         "Tonga",
+        //         "Vanuatu",
+        //         "Solomon Islands",
+        //         "Micronesia",
+        //         "Palau",
+        //     ]
+        // ],
+        // [
+        //     "name" => "Africa",
+        //     "countries" => [
+        //         "South Africa",
+        //         "Nigeria",
+        //         "Egypt",
+        //         "Kenya",
+        //         "Ethiopia",
+        //         "Ghana",
+        //         "Morocco",
+        //         "Algeria",
+        //         "Tunisia",
+        //         "Uganda",
+        //     ]
+        // ],
+        // [
+        //     "name" => "Americas",
+        //     "countries" => [
+        //         "United States",
+        //         "Canada",
+        //         "Mexico",
+        //         "Brazil",
+        //         "Argentina",
+        //         "Colombia",
+        //         "Chile",
+        //         "Peru",
+        //         "Venezuela",
+        //         "Ecuador",
+        //     ]
+        // ],
+        // [
+        //     "name" => "Europe",
+        //     "countries" => [
+        //         "United Kingdom",
+        //         "Germany",
+        //         "France",
+        //         "Italy",
+        //         "Spain",
+        //         "Netherlands",
+        //         "Sweden",
+        //         "Norway",
+        //         "Denmark",
+        //         "Finland",
+        //     ]
+        // ],
+        // [
+        //     "name" => "Middle East",
+        //     "countries" => [
+        //         "Iran",
+        //         "Saudi Arabia",
+        //         "United Arab Emirates",
+        //         "Qatar",
+        //         "Kuwait",
+        //         "Oman",
+        //         "Bahrain",
+        //         "Israel",
+        //         "Jordan",
+        //         "Lebanon",
+        //         "Syria",
+        //         "Iraq",
+        //         "Yemen",
+        //     ]
+        // ]
     ]
 ];

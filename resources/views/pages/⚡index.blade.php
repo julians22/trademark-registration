@@ -21,7 +21,7 @@ new class extends Component
     public string $registranWhatsappNumber = '';
     public string $registranWeChatNumber = '';
 
-    public bool $is_show_inquiry = false;
+    public bool $is_show_inquiry = true;
 
     public $wordMarks = [
         '',
@@ -266,12 +266,24 @@ new class extends Component
 
                                 <div class=""
                                     x-show="selectedClasses.length > 0">
-                                    <div class="flex flex-wrap gap-2 mb-4">
-                                        @foreach ($selectedClasses as $item)
-                                            <p>
-                                                {{ $item }} - {{ $classes[$item] }}
-                                            </p>
-                                        @endforeach
+                                    <div class="mb-12 overflow-x-auto">
+                                        <table class="table table-zebra">
+                                            <!-- head -->
+                                            <thead>
+                                            <tr>
+                                                <th class="w-36">Class</th>
+                                                <th>Description</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($selectedClasses as $item)
+                                                <tr>
+                                                    <th class="text-center">{{ $item }}</th>
+                                                    <td>{{ $classes[$item] }}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
 
@@ -283,7 +295,7 @@ new class extends Component
                                     wire:ignore
                                     id="my_modal_1" class="modal">
                                     <div
-                                        class="rounded-2xl max-w-5xl modal-box">
+                                        class="rounded-2xl w-full max-w-5xl modal-box">
                                         <h3 class="font-bold text-lg">SELECT CLASSES FOR “TRADEMARK”</h3>
                                         <p class="mb-6"><i>Select the relevant classification of goods and services to the above trade mark application.
                                             You may select one or more classes which are applicable to your trademark application.</i></p>
